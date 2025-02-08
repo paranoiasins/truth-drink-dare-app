@@ -1,0 +1,316 @@
+/* Google Font: Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* 
+  カラースキーム:
+    - 背景: #1C1C1C (黒に近いダークグレー)
+    - カード背景: #2E2E2E (やや明るめのダークグレー)
+    - テキスト＆基本UI: #FFFFFF (白) / #CCCCCC (ライトグレー)
+    - アクセントカラー: #D32F2F (エレガントなスカーレット)
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #1C1C1C;  /* 黒に近いダークグレー */
+  color: #FFFFFF;       /* 基本テキストは白 */
+  box-sizing: border-box;
+}
+
+/* 全体のコンテナ */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-size: 3rem;
+  margin: 0;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* カード風レイアウト */
+.card {
+  background: #2E2E2E;       /* ダークグレー（背景より少し明るい） */
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* プレイヤー名入力 */
+.players-input h2 {
+  margin-top: 0;
+}
+
+.player-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.player-input-grid input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #CCCCCC;  /* 枠線はライトグレー */
+  border-radius: 6px;
+  background: #1C1C1C;       /* 背景と同じダークグレー */
+  color: #FFFFFF;            /* テキストは白 */
+  box-sizing: border-box;
+}
+
+/* モード選択 */
+.mode-selection select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #CCCCCC;
+  font-size: 1rem;
+  background: #1C1C1C;
+  color: #FFFFFF;
+}
+
+/* ゲームエリア */
+.game-area .player-info {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.current-player {
+  font-size: 1.6rem;
+  color: #D32F2F;  /* アクセントカラー（スカーレット） */
+  font-weight: 700;
+}
+
+.prompt-display {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.prompt-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.prompt-category {
+  display: block;
+  font-size: 1rem;
+  margin-top: 8px;
+  color: #CCCCCC;  /* カテゴリはライトグレー */
+}
+
+/* ボタンスタイル */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* アクションボタン: 真実・飲む・挑戦 全て同じアクセントカラー */
+.btn-truth,
+.btn-drink,
+.btn-challenge {
+  background: #D32F2F;   /* アクセントカラー（スカーレット） */
+  color: #FFFFFF;
+  padding: 14px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s;
+}
+
+/* ボタンホバー時のエフェクト */
+.btn-truth:hover,
+.btn-drink:hover,
+.btn-challenge:hover {
+  transform: scale(1.05);
+  background: #B71C1C;  /* 少し濃いスカーレットに変化 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* 飲んだ回数ランキング */
+.ranking h2 {
+  margin-top: 0;
+}
+
+.ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.ranking-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #CCCCCC;  /* ランキングの基本色はライトグレー */
+}
+
+/* 罰ゲーム該当者はアクセントカラー */
+.punished {
+  color: #D32F2F;
+  font-weight: 700;
+}
+
+.punishment {
+  font-style: italic;
+  margin-left: 5px;
+}
+
+/* 履歴タブ */
+.history-tab {
+  background: #2E2E2E;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  border-top: 2px solid #444;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  margin-top: auto;
+  transition: background 0.3s;
+}
+
+.history-tab:hover {
+  background: #3E3E3E;  /* 少し明るめのダークグレー */
+}
+
+.history h2 {
+  margin-top: 0;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.history-list li {
+  margin-bottom: 8px;
+  color: #CCCCCC;  /* 履歴のテキストもライトグレー */
+}
+
+.history-time {
+  font-weight: 600;
+  color: #FFFFFF;  /* 時間だけ白で強調 */
+}
+
+/* モーダルのオーバーレイ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* モーダル本体 */
+.modal-content {
+  background: #2E2E2E;
+  color: #FFFFFF;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-popup-close {
+  background: #D32F2F;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s;
+}
+
+.btn-popup-close:hover {
+  transform: scale(1.05);
+  background: #B71C1C;  /* ホバーで濃いスカーレット */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* スクロールバーのカスタマイズ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #2E2E2E;
+}
+::-webkit-scrollbar-thumb {
+  background: #D32F2F;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B71C1C;
+}
+
+/* ------------------------- */
+/*   レスポンシブ対応        */
+/* ------------------------- */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2.4rem;
+  }
+
+  .player-input-grid {
+    grid-template-columns: 1fr;  /* スマホでは1列 */
+  }
+
+  .button-group {
+    flex-direction: column;      /* ボタン縦並び */
+    gap: 12px;
+  }
+
+  .btn-truth,
+  .btn-drink,
+  .btn-challenge {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+
+  .ranking-list li {
+    font-size: 0.95rem;
+  }
+
+  .history-tab {
+    padding: 10px;
+  }
+
+  .modal-content {
+    max-width: 85%;
+    padding: 20px;
+  }
+
+  .btn-popup-close {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
