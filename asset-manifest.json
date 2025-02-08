@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/truth-drink-dare-app/static/css/main.2ec7464c.css",
+    "main.js": "/truth-drink-dare-app/static/js/main.97909da3.js",
+    "static/js/156.6307a8b5.chunk.js": "/truth-drink-dare-app/static/js/156.6307a8b5.chunk.js",
+    "index.html": "/truth-drink-dare-app/index.html",
+    "main.2ec7464c.css.map": "/truth-drink-dare-app/static/css/main.2ec7464c.css.map",
+    "main.97909da3.js.map": "/truth-drink-dare-app/static/js/main.97909da3.js.map",
+    "156.6307a8b5.chunk.js.map": "/truth-drink-dare-app/static/js/156.6307a8b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ec7464c.css",
+    "static/js/main.97909da3.js"
+  ]
+}
